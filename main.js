@@ -72,25 +72,85 @@
 // console.log(calculator('remainder', 2, 1));
 // console.log(calculator('seoul', 2, 1));
 
-class Human {
-  #name;
-  #_age = 22;
-  constructor(name, age, sex) {
-    this.name = name;
-    this._age = age;
-    this.sex = sex;
-  }
+// class Human {
+//   constructor(name = 'jayoon', age = 27, sex = 'man') {
+//     this.name = name;
+//     this.age = age;
+//     this.sex = sex;
+//   }
 
-  static grade = 1;
-  // static printGrade() {
-  //   console.log(grade);
-  // }
-}
+//   printProperty() {
+//     console.log(`    name: ${this.name}
+//     age: ${this.age}
+//     sex: ${this.sex}`)
+//   }
 
-const man = new Human('jayoon', 27, 'man');
+//   static grade = 1;
+//   static printGrade() {
+//     console.log(this.grade);
+//   }
+// }
 
-// Human.printGrade();
-console.log(Human.grade);
+// How to save value when variable is assinged by object
+// let A = new Human('kipark');
+// console.log(A.name);
+// let B = A;
+// A = new Human('jiyokim');
 
-man.age = 20;
-console.log(man.age);
+// console.log(A.name);
+// console.log(B.name);
+
+// Human.printGrade(Human.grade);
+// const man = new Human('jayoon', 27, 'man');
+
+// How to use static member function and variable.
+// // Human.printGrade();
+// console.log(Human.grade);
+
+// man.age = 20;
+// console.log(man.age);
+
+// continue
+// var string = 'Hello World!';
+// var word = 'l';
+// var count = 0;
+
+// for (var i = 0; i < string.length; i++) {
+//   if (string[i] !== word)
+//     continue;
+
+//   count++;
+//   console.log(`count is ${count}!`);
+// }
+
+// Optional chaining 
+// var elem = null;
+// var elem;
+// // var elem = new Human();
+
+// elem?.printProperty();
+// console.log(typeof elem);
+
+// console.clear();
+
+/**
+ * Short circuit evaluation
+ */
+// var string = 0;
+
+// var length = string && string.length;
+
+// console.log(length);
+
+/**
+ * nullish coalescing
+ */
+// var data = '';
+// var string = data || 'Hello World!';
+
+// console.log(string);
+
+var data = '';
+var string = data ?? 'Hello World!'; // 0 이나 empty string 이 유효한 값일 때 이를 true 로 평가하여 의도한대로 뒤의 값을 반환 받음
+
+console.log(string);
